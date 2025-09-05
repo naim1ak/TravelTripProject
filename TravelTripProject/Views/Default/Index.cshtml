@@ -1,0 +1,108 @@
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restoranlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacaklar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+                        <div class="slider" style="width:670px;height:345px">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li><img src="@x.BlogImage" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>🌍 Tatil ve Seyahat Bloğumuza Hoş Geldiniz!</h3>
+                    <p>
+                        Dünyayı keşfetmek, yeni yerler görmek ve unutulmaz anılar biriktirmek isteyen herkes için hazırladığımız bu blogda; tatil, seyahat ve gezi deneyimlerimizi sizlerle paylaşıyoruz. Burada yalnızca popüler destinasyonlar değil, keşfedilmeyi bekleyen gizli cennetler, yerel lezzetler ve kültürel zenginlikler de sizi bekliyor.
+
+                        Amacımız, seyahat etmeyi sevenlere ilham vermek ve tatil planlarını yaparken onlara rehber olmaktır. İster sahil kasabalarında huzurlu bir tatil, ister Avrupa’nın tarihi şehirlerinde kültür dolu bir gezi, isterseniz de doğa ile iç içe macera dolu bir yolculuk hayal edin; bu blogda her zevke uygun fikirler bulabilirsiniz.
+
+                        Yolculukların sadece gidilen yerlerden ibaret olmadığını, yol boyunca karşılaşılan insanlarla, yaşanan anılarla ve edinilen deneyimlerle anlam kazandığını düşünüyoruz. Siz de bizimle birlikte seyahat etmeye, dünyayı keşfetmeye ve yeni hikâyeler yazmaya hazır olun!
+                    </p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3", "Default")
+                        @Html.Action("Partial4", "Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
